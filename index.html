@@ -1,221 +1,269 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio – Nguyễn Đức Toàn</title>
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Học Phần - Nguyễn Đức Toàn</title>
+    <style>
+        :root {
+            --primary-color: #1a252f;
+            --accent-color: #f39c12;
+            --text-light: #ffffff;
+            --bg-light: #f8f9fa;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: var(--bg-light);
+        }
+        header {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            padding: 40px 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: var(--accent-color);
+        }
+        nav {
+            background: #2c3e50;
+            padding: 10px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: var(--accent-color);
+        }
+        .container {
+            max-width: 1100px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        section {
+            background: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        h2 {
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+            color: var(--primary-color);
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .card {
+            background: var(--bg-light);
+            padding: 20px;
+            border-radius: 6px;
+            border-left: 4px solid var(--primary-color);
+        }
+        .project-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .project-card h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        .file-link {
+            display: inline-block;
+            margin-top: 10px;
+            color: #2980b9;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .file-link:hover {
+            text-decoration: underline;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: var(--primary-color);
+            color: white;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
 
-  <nav class="navbar" id="navbar">
-    <div class="nav-container">
-      <a href="#" class="nav-brand">NDT<span class="dot">.</span></a>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="#home" class="nav-link active">Giới thiệu</a></li>
-        <li><a href="#about" class="nav-link">Bài tập dự án</a></li>
-        <li><a href="#summary" class="nav-link">Tổng kết</a></li>
-      </ul>
-      <button class="hamburger" id="hamburger" aria-label="Menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </nav>
+    <header>
+        <h1>PORTFOLIO HỌC PHẦN</h1>
+        <p style="font-size: 1.2em; margin: 10px 0 0 0;">Nhập môn Công nghệ số & Ứng dụng AI</p>
+    </header>
 
-  <header class="hero" id="home">
-    <div class="hero-container">
-      <p class="hero-subtitle">Digital Portfolio Cá Nhân</p>
-      <h1 class="hero-title">Nguyễn Đức Toàn</h1>
-      <p class="hero-tagline">Hành trình khám phá và làm chủ Công nghệ thông tin</p>
-      <p class="hero-desc">Chào mừng thầy cô và các bạn đến với trang lưu trữ các sản phẩm, dự án học tập và minh chứng thực hành trong học phần Công nghệ thông tin. Trang web được xây dựng nhằm tổng hợp năng lực số và tư duy sáng tạo trong môi trường học thuật hiện đại.</p>
-      <div class="hero-buttons">
-        <a href="#about" class="btn btn--primary">Xem bài tập dự án</a>
-        <a href="#summary" class="btn btn--secondary">Xem tổng kết học phần</a>
-      </div>
-    </div>
-  </header>
+    <nav>
+        <a href="#gioi-thieu">Giới thiệu</a>
+        <a href="#du-an">Dự án học tập</a>
+        <a href="#tong-ket">Tổng kết</a>
+    </nav>
 
-  <section class="projects" id="about">
     <div class="container">
-      <div class="section-header text-center">
-        <p class="section-subtitle">Sản phẩm thực hành</p>
-        <h2 class="section-title">Bài tập dự án</h2>
-        <div class="header-line"></div>
-      </div>
 
-      <div class="projects-grid">
-        <div class="project-card">
-          <span class="project-num">01</span>
-          <div class="project-header">
-            <div class="project-icon-box"><i class="fa-solid fa-computer"></i></div>
-            <h3 class="project-title">Máy tính và các thiết bị ngoại vi</h3>
-          </div>
-          <p class="project-desc">Bài tập tìm hiểu về kiến trúc máy tính, cách phân loại và quản lý cấu trúc tệp tin một cách khoa học trên hệ thống máy tính cá nhân.</p>
-          <div class="project-actions">
-            <button class="action-btn" onclick="openModal(1)"><i class="fa-solid fa-arrow-up-right-from-square"></i> Xem yêu cầu</button>
-          </div>
-          <div class="upload-zone">
-            <div class="upload-list" id="file-list-1"></div>
-          </div>
-        </div>
+        <!-- TRANG 1: GIỚI THIỆU BẢN THÂN -->
+        <section id="gioi-thieu">
+            <h2>TRANG 1: GIỚI THIỆU BẢN THÂN</h2>
+            <p>Xin chào, tôi là <strong>Nguyễn Đức Toàn</strong> (MSV: 25021452), hiện đang là sinh viên ngành <strong>Cơ điện tử</strong>. Tôi có niềm đam mê lớn với bóng đá và luôn mong muốn phát triển toàn diện các kỹ năng công nghệ số, năng lực làm việc nhóm cũng như ứng dụng trí tuệ nhân tạo vào thực tế học tập.</p>
+            
+            <div class="grid">
+                <div class="card">
+                    <h3>🎯 Mục tiêu học tập</h3>
+                    <ul>
+                        <li>Nắm vững các kiến thức nền tảng vững chắc về công nghệ số.</li>
+                        <li>Ứng dụng linh hoạt và hiệu quả chúng vào ngành học Cơ điện tử nhằm nâng cao năng suất học tập và nghiên cứu khoa học.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>🚀 Định hướng phát triển</h3>
+                    <ul>
+                        <li>Trở thành kỹ sư Cơ điện tử có năng lực số tốt, thành thạo tự động hóa gắn liền với ứng dụng điều khiển hệ thống.</li>
+                        <li>Song song phát triển các kỹ năng mềm quan trọng: Lãnh đạo nhóm và giao tiếp thích nghi.</li>
+                    </ul>
+                </div>
+            </div>
 
-        <div class="project-card">
-          <span class="project-num">02</span>
-          <div class="project-header">
-            <div class="project-icon-box"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
-            <h3 class="project-title">Khai thác dữ liệu và thông tin</h3>
-          </div>
-          <p class="project-desc">Thực hành tìm kiếm thông tin nâng cao sử dụng các toán tử tìm kiếm chuyên biệt và ứng dụng bộ tiêu chí đánh giá độ tin cậy của tài liệu.</p>
-          <div class="project-actions">
-            <button class="action-btn" onclick="openModal(2)"><i class="fa-solid fa-arrow-up-right-from-square"></i> Xem yêu cầu</button>
-          </div>
-          <div class="upload-zone">
-            <div class="upload-list" id="file-list-2"></div>
-          </div>
-        </div>
+            <div class="card" style="margin-top: 20px;">
+                <h3>📁 Mục tiêu của Portfolio</h3>
+                <p>Tổng hợp đầy đủ các sản phẩm học tập cá nhân; thể hiện rõ nét các Năng lực số đã được trau dồi; tạo nền tảng vững chắc phục vụ cho hành trình học tập dài hạn và phát triển sự nghiệp tương lai.</p>
+            </div>
+        </section>
 
-        <div class="project-card">
-          <span class="project-num">03</span>
-          <div class="project-header">
-            <div class="project-icon-box"><i class="fa-solid fa-brain"></i></div>
-            <h3 class="project-title">Tổng quan về Trí tuệ nhân tạo</h3>
-          </div>
-          <p class="project-desc">Kỹ thuật viết Prompt hiệu quả phục vụ học tập, thực hành so sánh kết quả giữa câu lệnh thông thường và câu lệnh chuẩn chuyên gia.</p>
-          <div class="project-actions">
-            <button class="action-btn" onclick="openModal(3)"><i class="fa-solid fa-arrow-up-right-from-square"></i> Xem yêu cầu</button>
-          </div>
-          <div class="upload-zone">
-            <div class="upload-list" id="file-list-3"></div>
-          </div>
-        </div>
+        <!-- TRANG 2: DỰ ÁN HỌC TẬP -->
+        <section id="du-an">
+            <h2>TRANG 2: DỰ ÁN HỌC TẬP (BÀI TẬP & SẢN PHẨM)</h2>
+            <p>Tổng hợp toàn bộ các bài tập thực hiện xuyên suốt học phần Nhập môn Công nghệ số và Ứng dụng AI:</p>
+            
+            <div class="grid">
+                <!-- Bài 1 -->
+                <div class="project-card">
+                    <h3>1. Máy tính & Thiết bị ngoại vi</h3>
+                    <p><strong>Mục tiêu:</strong> Tìm hiểu chi tiết cấu tạo, nguyên lý vận hành của máy tính và hệ thống ngoại vi.</p>
+                    <p><strong>Quá trình:</strong> Nghiên cứu phần cứng, lắp đặt mô phỏng cấu trúc máy.</p>
+                    <a class="file-link" href="#">📎 File đính kèm: 25021453-NguyenDucToan-Bai1.pdf</a>
+                </div>
 
-        <div class="project-card">
-          <span class="project-num">04</span>
-          <div class="project-header">
-            <div class="project-icon-box"><i class="fa-solid fa-users-gear"></i></div>
-            <h3 class="project-title">Giao tiếp hợp tác môi trường số</h3>
-          </div>
-          <p class="project-desc">Ứng dụng các công cụ đám mây và hệ thống quản trị dự án trực tuyến nhằm tối ưu hóa hiệu suất làm việc nhóm từ xa một cách đồng bộ.</p>
-          <div class="project-actions">
-            <button class="action-btn" onclick="openModal(4)"><i class="fa-solid fa-arrow-up-right-from-square"></i> Xem yêu cầu</button>
-          </div>
-          <div class="upload-zone">
-            <div class="upload-list" id="file-list-4"></div>
-          </div>
-        </div>
+                <!-- Bài 2 -->
+                <div class="project-card">
+                    <h3>2. Khai thác dữ liệu & Thông tin</h3>
+                    <p><strong>Mục tiêu:</strong> Luyện tập kỹ năng tìm kiếm nâng cao, nhận diện và đánh giá độ tin cậy của nguồn học thuật.</p>
+                    <p><strong>Quá trình:</strong> Sàng lọc dữ liệu trên môi trường mạng, đánh giá nguồn tin khoa học.</p>
+                    <a class="file-link" href="#">📎 File đính kèm: 25021452-NguyenDucToan-Bai2.pdf</a>
+                </div>
 
-        <div class="project-card">
-          <span class="project-num">05</span>
-          <div class="project-header">
-            <div class="project-icon-box"><i class="fa-solid fa-photo-film"></i></div>
-            <h3 class="project-title">Sáng tạo nội dung số</h3>
-          </div>
-          <p class="project-desc">Thiết kế ấn phẩm truyền thông, lên kịch bản và biên tập video đa nền tảng kết hợp các công cụ hỗ trợ thông minh thế hệ mới.</p>
-          <div class="project-actions">
-            <button class="action-btn" onclick="openModal(5)"><i class="fa-solid fa-arrow-up-right-from-square"></i> Xem yêu cầu</button>
-          </div>
-          <div class="upload-zone">
-            <div class="upload-list" id="file-list-5"></div>
-          </div>
-        </div>
+                <!-- Bài 3 -->
+                <div class="project-card">
+                    <h3>3. Tổng quan về Trí tuệ nhân tạo (AI)</h3>
+                    <p><strong>Mục tiêu:</strong> Nhận thức rõ ràng về ứng dụng thực tiễn và tác động của AI trong đời sống hiện đại.</p>
+                    <p><strong>Quá trình:</strong> Sử dụng các công cụ AI hỗ trợ phân tích thông tin học tập hiệu quả.</p>
+                    <a class="file-link" href="#">📎 File đính kèm: 25021452-NguyenDucToan-Bai3.pdf</a>
+                </div>
 
-        <div class="project-card">
-          <span class="project-num">06</span>
-          <div class="project-header">
-            <div class="project-icon-box"><i class="fa-solid fa-shield-halved"></i></div>
-            <h3 class="project-title">An toàn và Liêm chính học thuật</h3>
-          </div>
-          <p class="project-desc">Xây dựng thói quen bảo mật thông tin cá nhân và áp dụng các nguyên tắc trích dẫn chuẩn mực, chống đạo văn trong kỷ nguyên số.</p>
-          <div class="project-actions">
-            <button class="action-btn" onclick="openModal(6)"><i class="fa-solid fa-arrow-up-right-from-square"></i> Xem yêu cầu</button>
-          </div>
-          <div class="upload-zone">
-            <div class="upload-list" id="file-list-6"></div>
-          </div>
-        </div>
+                <!-- Bài 4 -->
+                <div class="project-card">
+                    <h3>4. Giao tiếp & Hợp tác môi trường số</h3>
+                    <p><strong>Mục tiêu:</strong> Sử dụng thành thạo các công cụ cộng tác, kết nối trực tuyến.</p>
+                    <p><strong>Quá trình:</strong> Thực hành trực tiếp quy trình tổ chức và quản lý dự án nhóm từ xa.</p>
+                    <a class="file-link" href="#">📎 File đính kèm: 25021452-NguyenDucToan-Bai4.pdf</a>
+                </div>
 
-      </div>
+                <!-- Bài 5 -->
+                <div class="project-card">
+                    <h3>5. Sáng tạo nội dung số</h3>
+                    <p><strong>Mục tiêu:</strong> Nắm vững xu hướng, quy trình xây dựng ý tưởng và sáng tạo nội dung số hoàn chỉnh.</p>
+                    <p><strong>Quá trình:</strong> Lên kế hoạch thiết kế giao diện, hoàn thiện sản phẩm Portfolio cá nhân.</p>
+                    <a class="file-link" href="#">📎 File đính kèm: 25021452-NguyenDucToan-Bai5.pdf</a>
+                </div>
+
+                <!-- Bài 6 -->
+                <div class="project-card">
+                    <h3>6. An toàn & Liêm chính học thuật</h3>
+                    <p><strong>Mục tiêu:</strong> Tuân thủ và áp dụng nghiêm túc các nguyên tắc đạo đức trong kỷ nguyên số.</p>
+                    <p><strong>Quá trình:</strong> Nghiên cứu sâu về luật sở hữu trí tuệ, tránh đạo văn khi sử dụng công nghệ số.</p>
+                    <a class="file-link" href="#">📎 File đính kèm: 25021452-NguyenDucToan-Bai6.pdf</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- TRANG 3: TỔNG KẾT & HƯỚNG PHÁT TRIỂN -->
+        <section id="tong-ket">
+            <h2>TRANG 3: TỔNG KẾT & HƯỚNG PHÁT TRIỂN</h2>
+            
+            <div class="card" style="margin-bottom: 20px;">
+                <h3>🔍 Nhìn lại hành trình & Trải nghiệm</h3>
+                <p>Thông qua việc thiết lập Portfolio, đây là lần đầu tiên tôi tiếp cận việc tổng hợp sản phẩm học tập một cách có hệ thống chuyên nghiệp. Quá trình này giúp tôi nhận thức rõ nét tầm quan trọng của việc lưu trữ dữ liệu khoa học. Tôi đã rèn luyện thêm kỹ năng tìm kiếm thông tin, khai thác tốt công cụ số, nâng cao năng lực làm việc nhóm và vận dụng AI bổ trợ việc học.</p>
+            </div>
+
+            <div class="grid">
+                <div class="project-card" style="border-left: 4px solid #2ecc71;">
+                    <h3>💡 Kiến thức đã học được</h3>
+                    <ul>
+                        <li>Hiểu sâu cấu tạo và nguyên lý hoạt động của máy tính.</li>
+                        <li>Nắm bắt kỹ thuật khai thác, đánh giá nguồn tri thức số.</li>
+                        <li>Biết cách ứng dụng thực tiễn tối ưu của AI tạo sinh.</li>
+                        <li>Thấu hiểu nguyên tắc đạo đức cốt lõi trong thời đại số.</li>
+                    </ul>
+                </div>
+
+                <div class="project-card" style="border-left: 4px solid #3498db;">
+                    <h3>🛠️ Kỹ năng đạt được</h3>
+                    <ul>
+                        <li>Tìm kiếm thông tin nâng cao và có bộ lọc chọn lọc.</li>
+                        <li>Sử dụng linh hoạt các nền tảng công cụ cộng tác trực tuyến.</li>
+                        <li>Tích hợp công cụ AI tạo sinh thông minh vào học tập.</li>
+                        <li>Lên ý tưởng thiết kế giao diện đồ họa cơ bản cho Portfolio.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="grid" style="margin-top: 20px;">
+                <div class="project-card" style="border-left: 4px solid #e74c3c;">
+                    <h3>⚠️ Khó khăn gặp phải</h3>
+                    <ul>
+                        <li>Quản lý, phân bổ thời gian chưa đều giữa các môn học.</li>
+                        <li>Việc đánh giá độ tin cậy của các nguồn thông tin mạng còn phức tạp.</li>
+                        <li>Tốn thời gian ban đầu để thích nghi với nhiều công cụ số mới.</li>
+                        <li>Đảm bảo tính liêm chính học thuật chuẩn xác khi tham chiếu AI.</li>
+                    </ul>
+                </div>
+
+                <div class="project-card" style="border-left: 4px solid #9b59b6;">
+                    <h3>📈 Hướng phát triển tương lai</h3>
+                    <ul>
+                        <li>Tiếp tục liên tục cập nhật Portfolio với các dự án kỹ thuật mới.</li>
+                        <li>Học sâu bản chất về hệ thống tự động hóa và Học máy (Machine Learning) ứng dụng trong ngành Cơ điện tử.</li>
+                        <li>Tích cực tham gia các dự án nhóm lớn, các cuộc thi kỹ thuật để mài giũa kỹ năng thực hành thực tế.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
     </div>
-  </section>
 
-  <section class="summary" id="summary">
-    <div class="container">
-      <div class="section-header text-center">
-        <p class="section-subtitle">Chặng đường nhìn lại</p>
-        <h2 class="section-title">Tổng kết học phần</h2>
-        <div class="header-line"></div>
-      </div>
+    <footer>
+        <p>© 2026 - Nguyễn Đức Toàn - Sinh viên ngành Cơ điện tử</p>
+    </footer>
 
-      <div class="summary-grid">
-        <div class="sum-card">
-          <div class="sum-icon"><i class="fa-solid fa-lightbulb"></i></div>
-          <h3>Kiến thức tiếp thu</h3>
-          <p>Qua học phần này, em đã nắm vững kiến thức từ nền tảng phần cứng máy tính đến các kỹ năng nâng cao như làm việc nhóm trên đám mây, khai thác dữ liệu lớn, ứng dụng AI một cách liêm chính và tư duy thiết kế sản phẩm truyền thông đa phương tiện.</p>
-        </div>
-
-        <div class="sum-card">
-          <div class="sum-icon"><i class="fa-solid fa-circle-check"></i></div>
-          <h3>Giá trị cốt lõi</h3>
-          <p>Kỹ năng số không chỉ dừng lại ở thao tác công cụ, mà quan trọng hơn là tư duy giải quyết vấn đề, tinh thần trách nhiệm khi chia sẻ không gian mạng và thái độ tôn trọng bản quyền, liêm chính trong học thuật.</p>
-        </div>
-
-        <div class="sum-card sum-card--wide">
-          <div class="sum-icon"><i class="fa-solid fa-star"></i></div>
-          <h3>Lời cảm ơn</h3>
-          <p>Em xin chân thành cảm ơn Thầy/Cô bộ môn đã tận tình hướng dẫn, định hướng và đồng hành cùng em trong suốt học phần. Những kiến thức và kỹ năng thực tiễn này chắc chắn sẽ là bệ phóng vững chắc cho công việc và quá trình tự học của em trong tương lai.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="footer-inner">
-      <p class="footer-name">Nguyễn Đức Toàn</p>
-      <p class="footer-sub">Digital Portfolio © 2026</p>
-      <p class="footer-course">Học phần: Công nghệ thông tin cơ bản</p>
-    </div>
-  </footer>
-
-  <div class="modal-overlay" id="modal-overlay">
-    <div class="modal-box">
-      <button class="modal-close" id="modal-close"><i class="fa-solid fa-xmark"></i></button>
-      <div class="modal-header">
-        <div class="modal-icon-container" id="modal-icon-box">
-          <i class="fa-solid fa-file-lines" id="modal-main-icon"></i>
-        </div>
-        <h3 id="modal-title">Tiêu đề bài tập</h3>
-      </div>
-      
-      <div class="modal-section">
-        <h4><i class="fa-solid fa-bullseye"></i> Mục tiêu bài học</h4>
-        <p id="modal-goal">Nội dung mục tiêu...</p>
-      </div>
-
-      <div class="modal-section">
-        <h4><i class="fa-solid fa-list-check"></i> Các bước triển khai</h4>
-        <ul class="modal-steps" id="modal-process">
-          </ul>
-      </div>
-
-      <div class="modal-section">
-        <h4><i class="fa-solid fa-paperclip"></i> Định dạng minh chứng</h4>
-        <span class="attachment-badge">
-          <i class="fa-solid fa-file-pdf" id="modal-attach-icon"></i> 
-          <span id="modal-attach-text">PDF</span>
-        </span>
-      </div>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
 </body>
 </html>
